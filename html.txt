@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio BTS SIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#f5f5f5;
+            color:#222;
+        }
+        header{
+            background:#1e1e2f;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+        nav{
+            background:#282845;
+            display:flex;
+            flex-wrap:wrap;
+        }
+        nav a{
+            color:white;
+            padding:12px 18px;
+            text-decoration:none;
+            display:block;
+        }
+        nav a:hover{
+            background:#3c3c6b;
+        }
+        .container{
+            max-width:1100px;
+            margin:20px auto;
+            padding:0 15px;
+        }
+        section{
+            display:none;
+            background:white;
+            padding:20px;
+            border-radius:6px;
+            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom:25px;
+        }
+        section.active{
+            display:block;
+        }
+        h2{
+            margin-top:0;
+            color:#1e1e2f;
+        }
+        .grid-2{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+        }
+        @media(max-width:800px){
+            .grid-2{
+                grid-template-columns:1fr;
+            }
+        }
+        ul{
+            padding-left:18px;
+        }
+        .tag{
+            display:inline-block;
+            background:#e3e3ff;
+            color:#222;
+            padding:4px 8px;
+            border-radius:4px;
+            margin:2px 4px 2px 0;
+            font-size:0.85rem;
+        }
+    </style>
+    <script>
+        function showSection(id){
+            const sections = document.querySelectorAll("section");
+            sections.forEach(s => s.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        }
+        window.addEventListener("DOMContentLoaded", () => {
+            showSection("bio");
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Mon Portfolio BTS SIO</h1>
+    <p>Étudiant en BTS Services Informatiques aux Organisations</p>
+</header>
+
+<nav>
+    <a href="#" onclick="showSection('bio');return false;">Biographie</a>
+    <a href="#" onclick="showSection('bts');return false;">BTS SIO / SLAM–SISR</a>
+    <a href="#" onclick="showSection('competences');return false;">Compétences</a>
+    <a href="#" onclick="showSection('e5');return false;">Épreuve E5</a>
+    <a href="#" onclick="showSection('e6');return false;">Épreuve E6</a>
+    <a href="#" onclick="showSection('veille');return false;">Veille technologique</a>
+</nav>
+
+<div class="container">
+
+    <!-- BIOGRAPHIE -->
+    <section id="bio">
+        <h2>Biographie</h2>
+        <div class="grid-2">
+            <div>
+                <p>Je m’appelle <strong>[Ton Nom]</strong>, étudiant en BTS SIO et passionné par l’informatique, les réseaux et le développement web.</p>
+                <p>Après un baccalauréat [spécialité / filière], j’ai choisi le BTS SIO afin d’acquérir des compétences techniques solides et préparer mon intégration dans le monde professionnel.</p>
+            </div>
+            <div>
+                <h3>Profil</h3>
+                <ul>
+                    <li>Formation : BTS SIO (option [SLAM ou SISR])</li>
+                    <li>Centres d’intérêt : réseaux, développement web, cybersécurité, mécanique auto, jeux vidéo</li>
+                    <li>Objectif : devenir [poste visé : développeur, admin système/réseau, etc.]</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- BTS SIO / SLAM / SISR -->
+    <section id="bts">
+        <h2>BTS SIO, SLAM et SISR</h2>
+        <p>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme bac+2 qui forme des techniciens capables de concevoir, déployer et sécuriser des services informatiques pour les entreprises. [web:8]</p>
+        <p>Après un tronc commun, l’étudiant choisit entre deux options : SISR (infrastructures, systèmes et réseaux) et SLAM (développement de solutions logicielles et applications métiers). [web:1][web:8]</p>
+
+        <h3>Option SISR</h3>
+        <ul>
+            <li>Administration de systèmes et de réseaux (Windows, Linux, virtualisation, sauvegarde). [web:8][web:11]</li>
+            <li>Déploiement et sécurisation d’infrastructures (pare-feu, VLAN, VPN, supervision). [web:11]</li>
+            <li>Support technique, gestion de parc et qualité de service. [web:5][web:11]</li>
+        </ul>
+
+        <h3>Option SLAM</h3>
+        <ul>
+            <li>Conception et développement d’applications web, mobiles et métiers. [web:2][web:8]</li>
+            <li>Gestion de bases de données, SQL, modélisation et intégration. [web:8]</li>
+            <li>Cybersécurité des applications et bonnes pratiques de développement. [web:2][web:14]</li>
+        </ul>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section id="competences">
+        <h2>Compétences acquises</h2>
+
+        <h3>Compétences techniques</h3>
+        <p>Voici quelques exemples de compétences que le BTS SIO permet de développer, à adapter selon ton option et tes projets.</p>
+        <div>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">PHP / Python</span>
+            <span class="tag">SQL / Bases de données</span>
+            <span class="tag">Réseaux TCP/IP</span>
+            <span class="tag">Virtualisation</span>
+            <span class="tag">Linux / Windows Server</span>
+            <span class="tag">Cybersécurité</span>
+        </div>
+
+        <h3>Compétences professionnelles</h3>
+        <ul>
+            <li>Analyser un besoin client et rédiger des spécifications fonctionnelles et techniques. [web:8]</li>
+            <li>Mettre en production, maintenir et sécuriser un service ou une application. [web:8][web:14]</li>
+            <li>Travailler en mode projet, documenter et présenter ses réalisations à un public non technique. [web:6][web:7]</li>
+        </ul>
+    </section>
+
+    <!-- E5 -->
+    <section id="e5">
+        <h2>Épreuve E5 – Compétences informatiques</h2>
+        <p>L’épreuve E5 évalue les compétences informatiques au travers de réalisations professionnelles décrites dans un dossier (passeport professionnel, fiches de situations). [web:6][web:9]</p>
+        <p>Elle s’appuie sur ton expérience en stage ou en alternance et vérifie ta capacité à expliquer, analyser et justifier tes choix techniques dans un contexte réel. [web:6][web:12]</p>
+
+        <h3>Contenu de mon dossier E5</h3>
+        <ul>
+            <li>Situation 1 : [titre de ton projet / mission] – objectifs, contexte, technologies utilisées.</li>
+            <li>Situation 2 : [titre de ton projet / mission] – problèmes rencontrés, solutions apportées, résultats.</li>
+            <li>Compétences mises en avant : [ex. déploiement serveur, développement web, sécurisation, etc.].</li>
+        </ul>
+    </section>
+
+    <!-- E6 -->
+    <section id="e6">
+        <h2>Épreuve E6 – Cybersécurité / Parcours pro</h2>
+        <p>L’épreuve E6 est centrée sur la cybersécurité des services informatiques et le parcours de professionnalisation, à partir de situations professionnelles documentées. [web:7][web:13][web:16]</p>
+        <p>Elle combine analyse d’un besoin, proposition de solutions, mise en œuvre technique et soutenance devant un jury dans un temps limité. [web:7][web:16]</p>
+
+        <h3>Mes situations E6</h3>
+        <ul>
+            <li>Fiche 1 : [ex. sécurisation d’un serveur / d’une appli] – outils, configurations, tests de sécurité.</li>
+            <li>Fiche 2 : [ex. supervision réseau, sauvegardes, politique de mots de passe, etc.].</li>
+            <li>Outils utilisés : [AD, GLPI, Docker, pare-feu, scripts, etc. selon ton option]. [web:13]</li>
+        </ul>
+    </section>
+
+    <!-- VEILLE TECHNO -->
+    <section id="veille">
+        <h2>Veille technologique</h2>
+        <p>La veille technologique consiste à se tenir informé des évolutions de l’informatique, des réseaux et de la cybersécurité afin d’adapter ses compétences et ses pratiques professionnelles. [web:14][web:17]</p>
+        <p>Elle s’appuie sur différentes sources (sites spécialisés, blogs, documentations officielles, communautés, vidéos, conférences) et alimente le dossier de professionnalisation du BTS SIO. [web:14][web:20]</p>
+
+        <h3>Thèmes de ma veille</h3>
+        <ul>
+            <li>Cybersécurité : actualités des vulnérabilités, bonnes pratiques, nouvelles normes.</li>
+            <li>Réseaux / Cloud : virtualisation, conteneurs, infrastructures hybrides.</li>
+            <li>Développement : nouveaux frameworks, bonnes pratiques en API, sécurisation des applis.</li>
+        </ul>
+
+        <h3>Sources utilisées</h3>
+        <ul>
+            <li>Sites spécialisés : documentation des éditeurs, blogs techniques, sites d’actualité IT.</li>
+            <li>Chaînes YouTube / podcasts orientés développement, réseaux et sécurité.</li>
+            <li>Communautés et forums (Stack Overflow, GitHub, etc.).</li>
+        </ul>
+    </section>
+
+</div>
+
+</body>
+</html>
